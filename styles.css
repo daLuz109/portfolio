@@ -1,32 +1,170 @@
-<!DOCTYPE html>
-<html lang="en">
+/* ANIMATIONS */
+@keyframes background-scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -400px -1354px;
+  }
+}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Card</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
 
-<body>
-    <div class="business-card">
-        <img class="profile-image" src="https://media.licdn.com/dms/image/v2/D5603AQG9LnL-rtgVbA/profile-displayphoto-scale_200_200/B56Zvd_h33GQAY-/0/1768955980164?e=2147483647&v=beta&t=t2zLDcLk3IZEZtGRxqAXzv380eMzjM4Dyo6gbVNBJx8">
-        <p class="full-name">Gabriel da Luz de Souza</p>
-        <p class="designation">Software Dev. Game Designer and Music Producer</p>
-        <p class="company">None</p>
-        <hr>
-        <h2>Contact</h2>
-        <p>E-mail: daluz.inf@gmail.com</p>
-        <p>Phone: +55 (51) 980473302</p>
-        <p><a class="portfolio-link" href="https://example.com">Portfolio</a></p>
-        <hr class="bottom-separator">
-        <div class="social-media">
-            <h2>Connect with me</h2>
-            <p><a href="https://example.com" class="link">Twitter</a></p>
-            <p><a href="https://example.com" class="link">LinkedIn</a></p>
-            <p><a href="https://example.com" class="link">Github</a></p>
-        </div>
-    </div>
-</body>
+/* GENERAL */
+.tab-content {
+    display: none
+}
 
-</html>
+.active.tab-content {
+    display: block
+}
+
+body {
+    background-image: url('images/background_2.png');
+    margin: 0;
+    color: black;
+    font-family: monospace;
+    animation: background-scroll 40s linear infinite;
+}
+
+h1, h2, p, ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+
+/* TAB SELECTOR */
+
+
+#tab-selector {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0 20%;
+    padding: 0;
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tab:hover {
+    background-color: #7e9fe0;
+    border-color: #5876b0;
+}
+
+.active.tab {
+    background-color: #6788c9;
+    border-color: #5876b0;
+}
+
+.tab {
+    padding: 16px 10%;
+    background-color: #b1cafc;
+    transition: background-color .5s ease;
+    border: 4px solid #6788c9;
+    border-radius: 4px;
+}
+
+
+/* TABS */
+
+
+.tabs {
+    background-color: #b1cafc;
+    width: 60%;
+    margin: 20px auto;
+    padding: 5px;
+    border: 4px solid #6788c9;
+    border-radius: 4px;
+}
+
+
+/* ABOUT ME */
+
+
+#profile-image {
+    float: left;
+    width: 27%;
+    margin: 20px;
+    border: 4px solid #6788c9;
+    border-radius: 4px;
+}
+
+#name {
+    font-size: 30px;
+    margin: 70px 0 0 0;
+}
+
+#contact {
+    margin: 55px 0 0 0;
+}
+
+.copyable:hover {
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: thin;
+    transition: font-size 0.5s ease;
+}
+
+#project-summary {
+    margin: 40px 0 0 0;
+}
+
+#project-summary-tabs {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+
+.project-summary-item {
+    border: 4px solid #6788c9;
+    border-radius: 4px;
+    margin: 10px;
+    width: 30%;
+}
+
+.project-summary-item p {
+    font-size: 14px;
+    padding: 5px;
+}
+
+.project-summary-item:hover {
+    margin: 5px 10px 10px;
+    transition: margin 0.5s ease;
+    cursor: pointer;
+}
+
+.project-summary-gif {
+    width: 90%;
+    border-radius: 4px;
+}
+
+
+/* MUSIC */
+
+
+#music p {
+    margin: 20px 30px;
+}
+
+#music audio {
+    display: block;
+    margin: 20px auto;
+    width: 90%;
+}
