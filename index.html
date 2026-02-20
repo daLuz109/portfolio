@@ -1,34 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Card</title>
-    <link  href="./styles.css" type="text/css" rel="stylesheet">
+    <title>Portfolio</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-    <div class="business-card">
-        <img class="profile-image" src="https://media.licdn.com/dms/image/v2/D5603AQG9LnL-rtgVbA/profile-displayphoto-scale_200_200/B56Zvd_h33GQAY-/0/1768955980164?e=2147483647&v=beta&t=t2zLDcLk3IZEZtGRxqAXzv380eMzjM4Dyo6gbVNBJx8">
-        <p class="full-name">Gabriel da Luz de Souza</p>
-        <p class="designation">Software Dev. Game Designer and Music Producer</p>
-        <p class="company">None</p>
-        <hr>
-        <h2>Contact</h2>
-        <p>E-mail: daluz.inf@gmail.com</p>
-        <p>Phone: +55 (51) 980473302</p>
-        <p><a class="portfolio-link" href="https://example.com">Portfolio</a></p>
-        <hr class="bottom-separator">
-        <div class="social-media">
-            <h2>Connect with me</h2>
-            <p><a href="https://example.com" class="link">Twitter</a></p>
-            <p><a href="https://example.com" class="link">LinkedIn</a></p>
-            <p><a href="https://example.com" class="link">Github</a></p>
+    <ul id="tab-selector">
+        <li data-tab-target="#about-me" class="active tab">About Me</li>
+        <li data-tab-target="#projects" class="tab" id="projects-tab">Projects</li>
+        <li data-tab-target="#music" class="tab">Music</li>
+    </ul>
+    <div class="tabs">
+        <div id="about-me" class="tab-content active">
+            <h1>About Me</h1>    
+            <img id="profile-image" src="images/profile-image.webp" alt="Me!">
+            <h2 id="name">Gabriel da Luz de Souza</h2>
+            <p>Aspiring programmer, game designer and music producer</p>
+            <p>Studying computer science at UFRGS - Brazil</p>
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>E-mail: <a class="copyable">daluz.inf@gmail.com</a></p>
+                <p>Discord: <a class="copyable">daelus.light</a></p>
+            </section>
+            <section id="project-summary">
+                <h2>Project Summary</h2>
+                <ul id="project-summary-tabs">
+                    <li class="project-summary-item">
+                        <h2>ImunoCell</h2>
+                        <img src="images/imunocell.gif" alt="ImunoCell gameplay" class="project-summary-gif">
+                        <p>This is a highscool project. The idea is that you are a white cell and have to fight against invasors like viruses and bacteria.</p>
+                        <p>Part of the project was to show how games can help you learn, and for that reason, I wanted to make it very accurate.</p>
+                        <p>The overall feel of the game is inspired by games like Hotline Miami, so it feels very smooth.</p>
+                        <p>This project gave me a lot of experience on Gamemaker Studio, but mostly on game design and art.</p>
+                    </li>
+                    <li class="project-summary-item">
+                        <h2>Catwitch</h2>
+                        <img src="images/catwitch.gif" alt="Catwitch gameplay" class="project-summary-gif">
+                        <p>My favorite project! This is a story-focused game with a bit of horror mixed in. You are a cat who's also a witch and you have to hunt for ingredients and make potions for the dog soldiers.</p>
+                        <p>I decided to limit the art to only 4 colors, mostly because I think it looks cool, but also because I wanted to see what I could do with limited resources.</p>
+                        <p>This project, again, gave me a lot of experience on Gamemaker, game design and art, but I also made music for this one.</p>
+                    </li>
+                    <li class="project-summary-item">
+                        <h2>Cleavage</h2>
+                        <img src="images/catwitch.gif" alt="Cleavage gameplay" class="project-summary-gif">
+                        <p>This one is a Minecraft mod, a bit unconventional for a portfolio but I think it's important to be shown.</p>
+                        <p>On this mod you have a bunch of different gems which can be crafted using a new ore, and each one of them has its own set of 3 abilities.</p>
+                        <p>The main reason of putting this here is because I learned a lot about java while making it.</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div id="projects" class="tab-content">
+            <h1>Projects</h1>
+        </div>
+        <div id="music" class="tab-content">
+            <h1>Music</h1>
+            <p>I started making music around 2022 for fun. I mostly make video-game music (since my dream is to make games), but I've also exeperimented on some other genres.</p>
+            <p>Here are some of my personal favorites:</p>
+            <h2>Purple Rain</h2>
+            <audio src="songs/Purple Rain.mp3" controls></audio>
+            <h2>Black Hole</h2>
+            <audio src="songs/Black Hole.mp3" controls></audio>
+            <h2>Ace of Spades</h2>
+            <audio src="songs/Ace of Spades.mp3" controls></audio>
+            <h2>Cave Battle</h2>
+            <audio src="songs/Cave Battle.mp3" controls></audio>
+            <h2>Spicy!</h2>
+            <audio src="songs/Spicy!.mp3" controls></audio>
+            <h2>Yellow Meadow</h2>
+            <audio src="songs/Yellow Meadow.mp3" controls></audio>
+            <h2>Serene</h2>
+            <audio src="songs/Serene.mp3" controls></audio>
         </div>
     </div>
 </body>
-
-
 </html>
-
